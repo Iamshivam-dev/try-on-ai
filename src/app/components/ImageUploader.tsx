@@ -15,7 +15,7 @@ export default function ImageUploader() {
   const [clothImage, setClothImage] = useState<File | null>(null);
   const [previewUser, setPreviewUser] = useState<string | null>(null);
   const [previewCloth, setPreviewCloth] = useState<string | null>(null);
-  const [status, setStatus] = useState<Status>(Status.Processing)
+  const [status, setStatus] = useState<Status>(Status.Upload)
   const [resultId, setResultId] = useState<string | null>(null)
   const userInputRef = useRef<HTMLInputElement>(null)
   const clothInputRef = useRef<HTMLInputElement>(null)
