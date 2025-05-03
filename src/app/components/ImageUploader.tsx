@@ -15,7 +15,7 @@ export default function ImageUploader() {
   const [clothImage, setClothImage] = useState<File | null>(null);
   const [previewUser, setPreviewUser] = useState<string | null>(null);
   const [previewCloth, setPreviewCloth] = useState<string | null>(null);
-  const [status, setStatus] = useState<Status>(Status.Upload)
+  const [status, setStatus] = useState<Status>(Status.Processing)
   const [resultId, setResultId] = useState<string | null>(null)
   const userInputRef = useRef<HTMLInputElement>(null)
   const clothInputRef = useRef<HTMLInputElement>(null)
@@ -189,7 +189,7 @@ export default function ImageUploader() {
       </div>
       </>
       }
-      {status === Status.Processing || status === Status.Uploading && <ProcessingImage status={status}/>}
+      {(status === Status.Processing || status === Status.Uploading) && <ProcessingImage status={status}/>}
       {status === Status.Failed && <div className="text-center">Oops Failed to upload or try on your images, this wasn&apos;t expected. <Button className="mt-4" onClick={()=>setStatus(Status.Upload)}>Try Again</Button></div>}
     </div>    
   );
