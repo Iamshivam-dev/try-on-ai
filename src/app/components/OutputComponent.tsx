@@ -36,8 +36,8 @@ export default function OutputComponent() {
         <h1 className="text-xl font-semibold text-center mb-3 w-full">
           Virtual Try-On Uploader
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 w-[90%]">
-          <div className="col-span-3 bg-muted p-6 rounded-lg shadow  flex items-center justify-center h-full">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 w-[90%] justify-center">
+          <div className="sm:col-span-3 bg-muted p-6 rounded-lg shadow  flex items-center justify-center h-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={img}
@@ -45,7 +45,7 @@ export default function OutputComponent() {
               className="w-full max-h-[300px] rounded object-contain mx-auto"
             />
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 m-auto sm:m-0">
             <Link href={"/try-on"}>
               <Button className="w-40">
                 <Pencil /> Try More

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <div className="flex flex-row gap-30">
+        <div className="flex flex-col sm:flex-row sm:gap-30">
           <div className="shadow-background">
             <video
               src="/output.mp4"
@@ -21,12 +21,12 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div>
-            <Image src="/logo.png" width={100} height={100} alt="logo" />
-            <h1 className="text-5xl font-extrabold leading-tight">
+          <div className="text-center sm:text-left">
+            <Image src="/logo.png" width={100} height={100} alt="logo" className="m-auto sm:m-0" />
+            <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight">
               Instantly see how outfits look on you
             </h1>
-            <h3 className="text-3xl leading-tight">
+            <h3 className="text:2x1 sm:text-3xl leading-tight">
               — no fitting room needed.
             </h3>
             <Button asChild className="text-2xl p-6 pl-10 pr-10 mt-5">
